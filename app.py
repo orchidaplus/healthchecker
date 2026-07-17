@@ -16,6 +16,11 @@ st.markdown("""
     p, li { font-size: 0.95rem !important; }
 </style>
 """, unsafe_allow_html=True)
+col_logo, col_title = st.columns([1, 5])
+with col_logo:
+    st.image("https://raw.githubusercontent.com/orchidaplus/orchidaplus.github.io/main/assets/logo-mark.png", width=60)
+with col_title:
+    st.markdown("### Orchid A+")
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "stroke_risk_model.joblib")
 SCORES_PATH = os.path.join(os.path.dirname(__file__), "reference_risk_scores.npy")
 
