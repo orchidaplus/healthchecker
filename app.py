@@ -6,6 +6,16 @@ import os
 
 st.set_page_config(page_title="Health Checker — Orchid A+", page_icon="🩺", layout="centered")
 
+st.markdown("""
+<style>
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.35rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    div[data-testid="stMetricValue"] { font-size: 1.5rem !important; }
+    div[data-testid="stMetricLabel"] { font-size: 0.85rem !important; }
+    p, li { font-size: 0.95rem !important; }
+</style>
+""", unsafe_allow_html=True)
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "stroke_risk_model.joblib")
 SCORES_PATH = os.path.join(os.path.dirname(__file__), "reference_risk_scores.npy")
 
